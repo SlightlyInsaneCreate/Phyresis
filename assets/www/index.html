@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+
+    <title>Phyresis</title>
+
+    <!-- ******************************* -->
+    <!-- *         Stylesheets         * -->
+    <!-- ******************************* -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/started.css">
+    <link rel="stylesheet" href="assets/css/ocean.css">
+    <link rel="stylesheet" href="assets/css/views.css">
+    <link rel="stylesheet" href="assets/css/create.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/tinyslider.css">
+    <link rel="stylesheet" href="assets/css/keyrune.css">
+    <link rel="stylesheet" href="assets/css/customicons.css">
+    <link rel="stylesheet" href="assets/css/mana.css">
+    <link rel="stylesheet" href="assets/css/radio.css">
+    <link rel="stylesheet" href="assets/css/type.css">
+    <link rel="stylesheet" href="assets/css/expansion.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/sagas.css">
+    <link rel="stylesheet" href="assets/css/token.css">
+    <link rel="stylesheet" href="assets/css/adventure.css">
+    <link rel="stylesheet" href="assets/css/ikoria.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/settings.css">
+    <link rel="stylesheet" href="assets/css/premium.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    
+  </head>
+
+  <body>
+
+    <div ng-view class="main-view"></div>
+    <canvas id="canvas"></canvas>
+
+    <!-- ******************************* -->
+    <!-- *          Libraries          * -->
+    <!-- ******************************* -->
+
+    <!-- Core -->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular-animate.min.js"></script>
+    <script src="lib/angular/angular-sanitize.min.js"></script>
+    <script src="lib/tinyslider/tinyslider.min.js"></script>
+    <script src="lib/inview/inview.js"></script>
+    <script src="lib/panzoom/panzoom.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/pouchdb/pouchdb-7.1.1.min.js"></script>
+    <script src="lib/pouchdb/pouchdb.cordova-sqlite.js"></script>
+    <script src="lib/fluxtouch/fluxtouch.js"></script>
+    <script src="app/init.js"></script>
+    
+    <!-- ****************************** -->
+    <!-- *          Settings          * -->
+    <!-- ****************************** -->
+
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+
+    <!-- ******************************** -->
+    <!-- *          Directives          * -->
+    <!-- ******************************** -->
+
+    <!-- Content Editable -->
+    <script src="app/directives/contenteditable/contenteditable.module.js"></script>
+    <script src="app/directives/contenteditable/contenteditable.js"></script>
+
+    <!-- Image Load -->
+    <script src="app/directives/imageload/imageload.module.js"></script>
+    <script src="app/directives/imageload/imageload.js"></script>
+
+    <!-- Modern Spell -->
+    <script src="app/directives/modernSpell/modernSpell.module.js"></script>
+    <script src="app/directives/modernSpell/modernSpell.js"></script>
+
+    <!-- Modern Land -->
+    <script src="app/directives/modernLand/modernLand.module.js"></script>
+    <script src="app/directives/modernLand/modernLand.js"></script>
+
+    <!-- Modern Planeswalker -->
+    <script src="app/directives/modernPlaneswalker/modernPlaneswalker.module.js"></script>
+    <script src="app/directives/modernPlaneswalker/modernPlaneswalker.js"></script>
+
+    <!-- Modern Token -->
+    <script src="app/directives/modernToken/modernToken.module.js"></script>
+    <script src="app/directives/modernToken/modernToken.js"></script>
+
+    <!-- Vintage Spell -->
+    <script src="app/directives/vintageSpell/vintageSpell.module.js"></script>
+    <script src="app/directives/vintageSpell/vintageSpell.js"></script>
+
+    <!-- Vintage Land -->
+    <script src="app/directives/vintageLand/vintageLand.module.js"></script>
+    <script src="app/directives/vintageLand/vintageLand.js"></script>
+
+    <!-- Extras Adventure -->
+    <script src="app/directives/extrasAdventure/extrasAdventure.module.js"></script>
+    <script src="app/directives/extrasAdventure/extrasAdventure.js"></script>
+
+    <!-- Extras Saga -->
+    <script src="app/directives/extrasSaga/extrasSaga.module.js"></script>
+    <script src="app/directives/extrasSaga/extrasSaga.js"></script>
+
+    <!-- Extras Enchantment Creature -->
+    <script src="app/directives/extrasEnchantmentCreature/extrasEnchantmentCreature.module.js"></script>
+    <script src="app/directives/extrasEnchantmentCreature/extrasEnchantmentCreature.js"></script>
+
+    <!-- Extras Vehicle -->
+    <script src="app/directives/extrasVehicle/extrasVehicle.module.js"></script>
+    <script src="app/directives/extrasVehicle/extrasVehicle.js"></script>
+
+    <!-- Extras Ikoria -->
+    <script src="app/directives/extrasIkoria/extrasIkoria.module.js"></script>
+    <script src="app/directives/extrasIkoria/extrasIkoria.js"></script>
+
+    <!-- Mana -->
+    <script src="app/directives/mana/mana.module.js"></script>
+    <script src="app/directives/mana/mana.js"></script>
+
+    <!-- Expansion -->
+    <script src="app/directives/expansion/expansion.module.js"></script>
+    <script src="app/directives/expansion/expansion.js"></script>
+
+    <!-- Type -->
+    <script src="app/directives/type/type.module.js"></script>
+    <script src="app/directives/type/type.js"></script>
+
+    <!-- Symbols -->
+    <script src="app/directives/symbols/symbols.module.js"></script>
+    <script src="app/directives/symbols/symbols.js"></script>
+
+    <!-- ******************************* -->
+    <!-- *          Factories          * -->
+    <!-- ******************************* -->
+
+    <!-- Card Aux -->
+    <script src="app/factories/cardAux.module.js"></script>
+    <script src="app/factories/cardAux.js"></script>
+
+    <!-- Dynamic CSS -->
+    <script src="app/factories/dynamicCSS.module.js"></script>
+    <script src="app/factories/dynamicCSS.js"></script>
+
+    <!-- ***************************** -->
+    <!-- *          Modules          * -->
+    <!-- ***************************** -->
+
+    <!-- Get Started -->
+    <script src="app/modules/started/started.module.js"></script>
+    <script src="app/modules/started/started.js"></script>
+
+    <!-- Create -->
+    <script src="app/modules/create/create.module.js"></script>
+    <script src="app/modules/create/create.js"></script>
+
+    <!-- Card -->
+    <script src="app/modules/card/card.module.js"></script>
+    <script src="app/modules/card/card.js"></script>
+
+    <!-- Gallery -->
+    <script src="app/modules/gallery/gallery.module.js"></script>
+    <script src="app/modules/gallery/gallery.js"></script>
+
+    <!-- Settings -->
+    <script src="app/modules/settings/settings.module.js"></script>
+    <script src="app/modules/settings/settings.js"></script>
+
+    <!-- Premium Features -->
+    <script src="app/modules/premium/premium.module.js"></script>
+    <script src="app/modules/premium/premium.js"></script>
+
+    <!-- Credits -->
+    <script src="app/modules/credits/credits.module.js"></script>
+    <script src="app/modules/credits/credits.js"></script>
+
+  </body>
+  
+</html>
